@@ -100,6 +100,7 @@ function iitRegistration(){
 		var newRow = document.createElement('tr');
 		$( newRow ).addClass(termObject.simplename);
 		$( newRow ).addClass("registration_option");
+		$( newRow ).addClass("registration_event_unbound");
 		$( newRow ).attr('id', termObject.simplename + "_" + courseObject.subjectcode + courseObject.coursenumber);
 		
 		$.each(courseObject, function(coursefield, courseValue) {
@@ -127,7 +128,15 @@ function iitRegistration(){
 	}
 	
 	function bindCourseEvents() {
-		
+		$("tr.registration_event_unbound").each(function() {
+			$(this).on("dblclick",{id: $(this).attr('id') }, toggleRegistration);
+			$(this).removeClass("registration_event_unbound");
+		});
+	}
+	
+	function toggleRegistration() {
+		debugLog("firing event!");
+		alert(event.data.id);
 	}
 
 	debugLog( "Ready!" );
