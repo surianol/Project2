@@ -100,6 +100,7 @@ function iitRegistration(){
 		var newRow = document.createElement('tr');
 		$( newRow ).addClass(termObject.simplename);
 		$( newRow ).addClass("registration_option");
+		$( newRow ).attr('id', termObject.simplename + "_" + courseObject.subjectcode + courseObject.coursenumber);
 		
 		$.each(courseObject, function(coursefield, courseValue) {
 			var currentCell = document.createElement('td');
