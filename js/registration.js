@@ -129,7 +129,7 @@ function iitRegistration(){
 				$( newRow ).addClass("course_credits_" + courseValue);
 			} else if(coursefield === "subjectname") {
 				$( newRow ).addClass("course_subject_" + courseValue);
-			} else 
+			}
 			
 			currentCell.appendChild(cellText);
 			newRow.appendChild(currentCell);

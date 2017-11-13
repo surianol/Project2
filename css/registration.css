@@ -17,16 +17,17 @@
 	display:block;
 }
 
-.coursedata_days {
-	display:block;
-}
-
 .coursedata_description {
+	clear: all;
 	display:block;
 }
 
-.coursedata_enddate {
-	display:block;
+.coursedata_endtime {
+	float: right;
+}
+
+.coursedata_starttime {
+	float: right;
 }
 
 .coursedata_description_button {
