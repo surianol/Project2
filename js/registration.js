@@ -136,7 +136,18 @@ function iitRegistration(){
 	
 	function toggleRegistration() {
 		debugLog("firing event!");
-		alert($(this).attr("id"));
+		
+		if( $(this).hasClass("registration_option") ) {
+			debugLog("Moved " + $(this).attr("id") + " to registered courses!");
+			$(this).addClass("registered_course");
+			$(this).removeClass("registration_option");
+			$(this).detach().appendTo(document.getElementById( "registered_courses_table" ));
+		} else {
+			debugLog("Moved " + $(this).attr("id") + " to available courses!");
+			$(this).addClass("registration_option");
+			$(this).removeClass("registered_course");
+			$(this).detach().appendTo(document.getElementById( "available_courses_table" ));
+		}
 	}
 
 	debugLog( "Ready!" );
