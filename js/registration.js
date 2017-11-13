@@ -130,7 +130,7 @@ function iitRegistration(){
 	function bindCourseEvents() {
 		$("div.registration_event_unbound").each(function() {
 			$(this).on("dblclick",{id: $(this).attr('id') }, toggleRegistration);
-			$(this).on("swiperight",{id: $(this).attr('id') }, toggleRegistration);
+			$(this).on("swipe",{id: $(this).attr('id') }, toggleRegistration);
 			$(this).removeClass("registration_event_unbound");
 		});
 	}
