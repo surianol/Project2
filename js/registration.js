@@ -33,6 +33,7 @@ function iitRegistration(){
 			$.each(termArray, function(termindex, termvalue){
 				debugLog(termindex);
 				debugLog(termvalue);
+				debugLog(termvalue.Name);
 			});
 		});
 	}
