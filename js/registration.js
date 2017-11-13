@@ -1,5 +1,12 @@
 function iitRegistration(){
-	console.log("Defining Functions");
+	var debugmode = true;
+	function debugLog( debugOutput ){
+		if(debugmode === true){
+			console.log(debugOutput);
+		}
+	}
+	debugLog("Debug Mode Active.");
+	debugLog("Defining Functions.");
 	//Term load and parsing
 	function parseTerms() {
 		console.log("Loading Term Json");
