@@ -130,6 +130,7 @@ function iitRegistration(){
 	function bindCourseEvents() {
 		$("div.registration_event_unbound").each(function() {
 			$(this).on("dblclick",{id: $(this).attr('id') }, toggleRegistration);
+			$(this).on("swiperight",{id: $(this).attr('id') }, toggleRegistration);
 			$(this).removeClass("registration_event_unbound");
 		});
 	}
@@ -141,11 +142,15 @@ function iitRegistration(){
 			debugLog("Moved " + $(this).attr("id") + " to registered courses!");
 			$(this).addClass("registered_course");
 			$(this).removeClass("registration_option");
+			//$(this).on("swipeleft",{id: $(this).attr('id') }, toggleRegistration);
+			//$(this).off("swiperight", toggleRegistration);
 			$(this).detach().appendTo(document.getElementById( "registered_courses" ));
 		} else {
 			debugLog("Moved " + $(this).attr("id") + " to available courses!");
 			$(this).addClass("registration_option");
 			$(this).removeClass("registered_course");
+			//$(this).off("swipeleft", toggleRegistration);
+			//$(this).on("swiperight",{id: $(this).attr('id') }, toggleRegistration);
 			$(this).detach().appendTo(document.getElementById( "available_courses" ));
 		}
 	}
