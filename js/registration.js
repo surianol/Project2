@@ -98,6 +98,7 @@ function iitRegistration(){
 	function processCourse(termObject, courseObject, courseTable) {
 		var newRow = document.createElement('tr');
 		$( newRow ).addClass(termObject.simplename);
+		$( newRow ).addClass("registration_option");
 		
 		$.each(courseObject, function(coursefield, courseValue) {
 			var currentCell = document.createElement('td');
