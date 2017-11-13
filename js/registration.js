@@ -84,13 +84,13 @@ function iitRegistration(){
 				
 				debugLog("Processing Courses");
 				var courseTable = document.getElementById( "available_courses" );
-				var courseFragement = document.createDocumentFragment();
+				var courseFragment = document.createDocumentFragment();
 
 				$.each(tempCourses, function(courseKey, courseDefinition) {
 					debugLog("Processing Course: " + courseDefinition.name);
 					processCourse(termdata,courseDefinition,courseFragment);
 				});
-				$( courseTable ).append(courseFragement);
+				$( courseTable ).append(courseFragment);
 			});
 		});
 	}
@@ -103,12 +103,12 @@ function iitRegistration(){
 			var currentCell = document.createElement('td');
 			$( currentCell ).addClass("coursedata_" + coursefield);
 			
-			var cellText = document.createTextNode();
+			var cellText = document.createTextNode(courseValue);
 			
 			if(coursefield === "days") {
 				$.each(courseValue, function( dayindex, dayname) {
 					$( newRow ).addClass("course_" + dayname);
-				}
+				});
 			} else if(coursefield === "credits"
 			|| coursefield === "subject"
 			) {
@@ -118,7 +118,8 @@ function iitRegistration(){
 			currentCell.appendChild(cellText);
 			newRow.appendChild(currentCell);
 		});
-
+		
+		courseTable.appendChild(newRow);
 		debugLog("Course Processed");
 	}
 
