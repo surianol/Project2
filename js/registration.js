@@ -32,27 +32,23 @@ function iitRegistration(){
 
 			debugLog("Iterate Through Term Data");
 			$.each(tempTermArray, function(termindex, termdefinition){
+				debugLog("Processing " + termdefinition.name);
 				//Start at the end points to determine ranges, this means less checks overall.
 				if(Date.parse(termdefinition.RegistrationDate) < Date.now() || Date.parse(termdefinition.EndDate) > Date.now() ) {
-					debugLog(termdefinition.Name);
 					debugLog("Not in scope");
 				} else if (Date.parse(termdefinition.StartDate) < Date.now()) {
-					debugLog(termdefinition.Name);
 					debugLog("Registration");
 					termArray.push({name:termdefinition.Name,simplename:termdefinition.SimpleName,mode:'Registration'});
 					debugLog(termArray);
 				} else if (Date.parse(termdefinition.AddDropDate) < Date.now()) {
-					debugLog(termdefinition.Name);
 					debugLog("AddDrop");
 					termArray.push({name:termdefinition.Name,simplename:termdefinition.SimpleName,mode:'AddDrop'});
 					debugLog(termArray);
 				} else if (Date.parse(termdefinition.WithdrawDate) < Date.now()) {
-					debugLog(termdefinition.Name);
 					debugLog("Withdraw");
 					termArray.push({name:termdefinition.Name,simplename:termdefinition.SimpleName,mode:'Withdraw'});
 					debugLog(termArray);
 				} else if (Date.parse(termdefinition.EndDate) < Date.now()) {
-					debugLog(termdefinition.Name);
 					debugLog("No changes");
 					termArray.push({name:termdefinition.Name,simplename:termdefinition.SimpleName,mode:'NoChange'});
 					debugLog(termArray);
@@ -85,10 +81,47 @@ function iitRegistration(){
 					debugLog("Course Data Passes Validation!");
 					tempCourses = courseBlock;
 				});
+				
+				debugLog("Processing Courses");
+				var courseTable = document.getElementById( "available_courses" );
+				var courseFragement = document.createDocumentFragment();
 
+				$.each(tempCourses, function(courseKey, courseDefinition) {
+					debugLog("Processing Course: " + courseDefinition.name);
+					processCourse(termdata,courseDefinition,courseFragment);
+				});
+				$( courseTable ).append(courseFragement);
 			});
 		});
 	}
+	
+	function processCourse(termObject, courseObject, courseTable) {
+		var newRow = document.createElement('tr');
+		$( newRow ).addClass(termObject.simplename);
+		
+		$.each(courseObject, function(coursefield, courseValue) {
+			var currentCell = document.createElement('td');
+			$( currentCell ).addClass("coursedata_" + coursefield);
+			
+			var cellText = document.createTextNode();
+			
+			if(coursefield === "days") {
+				$.each(courseValue, function( dayindex, dayname) {
+					$( newRow ).addClass("course_" + dayname);
+				}
+			} else if(coursefield === "credits"
+			|| coursefield === "subject"
+			) {
+				$( newRow ).addClass("course_" + courseValue);
+			}
+			
+			currentCell.appendChild(cellText);
+			newRow.appendChild(currentCell);
+		});
+
+		debugLog("Course Processed");
+	}
+
 	debugLog( "Ready!" );
 	debugLog( "Performing Ajax!" );
 	parseTerms();
