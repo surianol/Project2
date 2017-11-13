@@ -16,24 +16,35 @@ function iitRegistration(){
 		debugLog("Loading Term Json");
 		$.getJSON( "json/terms.json", function ( termdata ) {
 			debugLog("Term Json Loaded.");
-
+			var tempTermArray = [];
 			var termArray = [];
-
 			debugLog("Capture Term Data");
 			$.each(termdata, function( termkey, termvalue ) {
 				if(termkey !== "terms") {
-					termArray("Term Data Fails Validation!");
+					tempTermArray("Term Data Fails Validation!");
 					return;
 				}
 				debugLog("Term Data Passes Validation!");
-				termArray = termvalue;
+				tempTermArray = termvalue;
 			});
 
 			debugLog("Iterate Through Term Data");
-			$.each(termArray, function(termindex, termvalue){
-				debugLog(termindex);
-				debugLog(termvalue);
-				debugLog(termvalue.Name);
+			$.each(tempTermArray, function(termindex, termdefinition){
+				//Start at the end points to determine ranges, this means less checks overall.
+				if(Date.parse(termdefinition.RegistrationDate) < Date.now() || Date.parse(termdefinition.EndDate) > Date.now() ) {
+				} else if (Date.parse(termdefinition.StartDate) < Date.now()) {
+					debugLog(termdefinition.Name);
+					debugLog("Registration");
+				} else if (Date.parse(termdefinition.AddDropDate) < Date.now()) {
+					debugLog(termdefinition.Name);
+					debugLog("Add Drop");
+				} else if (Date.parse(termdefinition.WithdrawDate) < Date.now()) {
+					debugLog(termdefinition.Name);
+					debugLog("Withdraw");
+				} else if (Date.parse(termdefinition.EndDate) < Date.now()) {
+					debugLog(termdefinition.Name);
+					debugLog("No changes");
+				}
 			});
 		});
 	}
