@@ -5,8 +5,6 @@
 		"subjectcode":"ECON",
 		"coursenumber":"151",
 		"description":"This course develops and applies economic models to understand the behavior of firms and consumers in the marketplace. The course explores microeconomic concepts such as demand and supply, market structures and pricing, market efficiency, public goods, externalities, and equilibrium. Combining knowledge from microeconomics and game theory, students will study interactions among firms and consumers given a wide range of market conditions, regulatory regimes, and competitive landscapes.",
-		"lecturehours":3,
-		"labhours":0,
 		"credits":3,
 		"days":["Monday","Wednesday","Friday"],
 		"starttime":"11:00",
