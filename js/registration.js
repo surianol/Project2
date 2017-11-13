@@ -113,7 +113,9 @@ function iitRegistration(){
 				cellText = document.createTextNode("Credit Hours: " + courseValue);
 			} else if(coursefield === "subjectname"){
 				cellText = document.createTextNode("Subject: " + courseValue);
-			} else if(coursefield === "subjectcode"){
+			} else if(coursefield === "subjectcode"
+			|| coursefield === "starttime"
+			){
 				cellText = document.createTextNode(courseValue + "-");
 			} else {
 				cellText = document.createTextNode(courseValue);
