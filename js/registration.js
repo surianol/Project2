@@ -83,7 +83,7 @@ function iitRegistration(){
 				});
 				
 				debugLog("Processing Courses");
-				var courseTable = document.getElementById( "available_courses" );
+				var courseTable = document.getElementById( "available_courses_table" );
 				var courseFragment = document.createDocumentFragment();
 
 				$.each(tempCourses, function(courseKey, courseDefinition) {
@@ -91,6 +91,7 @@ function iitRegistration(){
 					processCourse(termdata,courseDefinition,courseFragment);
 				});
 				$( courseTable ).append(courseFragment);
+				bindCourseEvents();
 			});
 		});
 	}
@@ -99,6 +100,8 @@ function iitRegistration(){
 		var newRow = document.createElement('tr');
 		$( newRow ).addClass(termObject.simplename);
 		$( newRow ).addClass("registration_option");
+		$( newRow ).addClass("registration_event_unbound");
+		$( newRow ).attr('id', termObject.simplename + "_" + courseObject.subjectcode + courseObject.coursenumber);
 		
 		$.each(courseObject, function(coursefield, courseValue) {
 			var currentCell = document.createElement('td');
@@ -122,6 +125,29 @@ function iitRegistration(){
 		
 		courseTable.appendChild(newRow);
 		debugLog("Course Processed");
+	}
+	
+	function bindCourseEvents() {
+		$("tr.registration_event_unbound").each(function() {
+			$(this).on("dblclick",{id: $(this).attr('id') }, toggleRegistration);
+			$(this).removeClass("registration_event_unbound");
+		});
+	}
+	
+	function toggleRegistration() {
+		debugLog("firing event!");
+		
+		if( $(this).hasClass("registration_option") ) {
+			debugLog("Moved " + $(this).attr("id") + " to registered courses!");
+			$(this).addClass("registered_course");
+			$(this).removeClass("registration_option");
+			$(this).detach().appendTo(document.getElementById( "registered_courses_table" ));
+		} else {
+			debugLog("Moved " + $(this).attr("id") + " to available courses!");
+			$(this).addClass("registration_option");
+			$(this).removeClass("registered_course");
+			$(this).detach().appendTo(document.getElementById( "available_courses_table" ));
+		}
 	}
 
 	debugLog( "Ready!" );
