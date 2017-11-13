@@ -1,4 +1,4 @@
-{"courses":[
+{"Fall2017":[
 	{
 		"name":"Making Strategic Decisions in the Marketplace",
 		"subject name":"Economics",
@@ -8,7 +8,6 @@
 		"Lecture Hours":3,
 		"Lab Hours":0,
 		"Credits":3,
-		"Term":"Fall 2017",
 		"Days":["Monday","Wednesday","Friday"],
 		"Start Time":"11:00",
 		"End Time":"12:30"
