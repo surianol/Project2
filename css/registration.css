@@ -1,0 +1,19 @@
+/*Dynamic class additions to table rows:
+	term names such as fall2017, spring2018
+	registration_option - course tr is not registered
+	registered_course - course tr is registered
+*/
+
+.registration_hide {
+  display:none;
+  visibility: hidden;
+}
+
+/*special processing for display of course data*/
+.coursedata_name {
+	display:block;
+}
+
+.coursedata_credits, .coursedata_days, .coursedata_starttime,.coursedata_endtime{
+	display:block;
+}

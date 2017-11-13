@@ -4,8 +4,12 @@
     <title>MyIIT - Course Registration</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
+    <link rel="stylesheet" media="screen" href="css/registration.css" />
     <!--Jquery-->
-    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <!--<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
     <!--Custom Libraries-->
     <script type="text/javascript" src="js/registration.js"></script>
   <!--Load terms. Display only valid terms-->
@@ -16,8 +20,6 @@
     <header>Register for your courses!</header>
     <section id="registered_courses">
 	  <!--Display registered courses here with a status-->
-	  <table id="registered_courses_table">
-	  </table>
     </section>
     <section id="weekly_schedule">
       <!--Display schedule in separate section-->
@@ -29,8 +31,6 @@
     </section>
     <main id="available_courses">
 	  Available Courses:
-	  <table id="available_courses_table">
-	  </table>
       <!--Attempt to implement endless scroll, dynamically loading courses if at all possible as one continues.-->
     </main>
     <footer>My footer information is here.</footer>
