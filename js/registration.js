@@ -8,10 +8,11 @@ function iitRegistration(){
 	}
 	debugLog("Debug Mode Active.");
 
-	//Define Functions
-	debugLog("Defining Objects");
+	//Define Variables
+	debugLog("Defining Variables");
 	
 	var termArray = [];
+
 	//Term load and parsing
 	function parseTerms() {
 		debugLog("Loading Term Json");
@@ -22,7 +23,7 @@ function iitRegistration(){
 			debugLog("Capture Term Data");
 			$.each(termdata, function( termkey, termvalue ) {
 				if(termkey !== "terms") {
-					tempTermArray("Term Data Fails Validation!");
+					debugLog("Term Data Fails Validation!");
 					return;
 				}
 				debugLog("Term Data Passes Validation!");
@@ -58,12 +59,39 @@ function iitRegistration(){
 				}
 			});
 			debugLog("Term Iteration Done");
+			
+			debugLog( "Loading Courses!" );
+			loadCourses();
+		});
+	}
+	
+	function loadCourses() {
+		
+		debugLog( "Loading Course Json" );
+		$.each(termArray, function(termIndex,termdata) {
+
+			debugLog( "Loading Course Json for " + termdata.name);
+			$.getJSON( "json/" + termdata.simplename + ".json", function ( courseData ) {
+
+				var tempCourses = [];
+				
+				debugLog("Validating Course Data");
+				debugLog(courseData);
+				$.each(courseData, function(courseTerm, courseBlock) {
+					if(courseTerm !== termdata.simplename) {
+						debugLog("Course Data Fails Validation!");
+						return;
+					}
+					debugLog("Course Data Passes Validation!");
+					tempCourses = courseBlock;
+				});
+
+			});
 		});
 	}
 	debugLog( "Ready!" );
-	debugLog( "Loading Terms!" );
+	debugLog( "Performing Ajax!" );
 	parseTerms();
-	debugLog( "Loading Courses!" );
 };
 
 // Handle document ready
