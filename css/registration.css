@@ -22,6 +22,10 @@
 	display:block;
 }
 
-.coursedata_days{
+.coursedata_days {
+	display:block;
+}
+
+.coursedata_description {
 	display:block;
 }
