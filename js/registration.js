@@ -107,16 +107,26 @@ function iitRegistration(){
 			var currentCell = document.createElement('span');
 			$( currentCell ).addClass("coursedata_" + coursefield);
 			
-			var cellText = document.createTextNode(courseValue);
+			var cellText;
+			
+			if(coursefield === "credits") {
+				cellText = document.createTextNode("Credit Hours: " + courseValue);
+			} else if(coursefield === "subjectname"){
+				cellText = document.createTextNode("Subject: " + courseValue);
+			} else if(coursefield === "subjectcode"){
+				cellText = document.createTextNode(courseValue + "-");
+			} else {
+				cellText = document.createTextNode(courseValue);
+			}
 			
 			if(coursefield === "days") {
 				$.each(courseValue, function( dayindex, dayname) {
 					$( newRow ).addClass("course_" + dayname);
 				});
-			} else if(coursefield === "credits"
-			|| coursefield === "subject"
-			) {
-				$( newRow ).addClass("course_" + courseValue);
+			} else if(coursefield === "credits") {
+				$( newRow ).addClass("course_credits_" + courseValue);
+			} else if(coursefield === "subjectname") {
+				$( newRow ).addClass("course_subject_" + courseValue);
 			}
 			
 			currentCell.appendChild(cellText);
