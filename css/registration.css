@@ -14,6 +14,14 @@
 	display:block;
 }
 
-.coursedata_credits, .coursedata_days, .coursedata_starttime,.coursedata_endtime{
+.coursedata_credits {
+	float: right;
+}
+
+.coursedata_subjectname {
+	display:block;
+}
+
+.coursedata_days, .coursedata_starttime,.coursedata_endtime{
 	display:block;
 }
