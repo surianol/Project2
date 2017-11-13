@@ -31,5 +31,6 @@
 
 .coursedata_description_button {
 	width: 100%;
-	display:block;
+	clear: all;
+	display: block;
 }
