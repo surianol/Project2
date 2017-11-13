@@ -16,5 +16,4 @@
 
 .coursedata_credits, .coursedata_days, .coursedata_starttime,.coursedata_endtime{
 	display:block;
-	float:right;
 }
