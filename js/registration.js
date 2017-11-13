@@ -165,24 +165,24 @@ function iitRegistration(){
 		event.stopPropagation();
 		if( $(this).hasClass("registration_option") ) {
 			debugLog("Moved " + $(this).attr("id") + " to registered courses!");
-			$(this).animate({
-				opacity: 0.25,
-				left: "+=50",
-				height: "toggle"
-			},1000, function() {
+			$(this).slideToggle(function(){
 				$(this).addClass("registered_course");
 				$(this).removeClass("registration_option");
 				$(this).on("swipeleft",{id: $(this).attr('id') }, toggleRegistration);
 				$(this).off("swiperight", toggleRegistration);
 				$(this).detach().appendTo(document.getElementById( "registered_courses" ));
+				$(this).slideToggle();
 			});
 		} else {
 			debugLog("Moved " + $(this).attr("id") + " to available courses!");
-			$(this).addClass("registration_option");
-			$(this).removeClass("registered_course");
-			$(this).off("swipeleft", toggleRegistration);
-			$(this).on("swiperight",{id: $(this).attr('id') }, toggleRegistration);
-			$(this).detach().appendTo(document.getElementById( "available_courses" ));
+			$(this).slideToggle(function(){
+				$(this).addClass("registration_option");
+				$(this).removeClass("registered_course");
+				$(this).off("swipeleft", toggleRegistration);
+				$(this).on("swiperight",{id: $(this).attr('id') }, toggleRegistration);
+				$(this).detach().appendTo(document.getElementById( "available_courses" ));
+				$(this).slideToggle();
+			});
 		}
 	}
 	
