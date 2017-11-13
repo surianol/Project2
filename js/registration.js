@@ -1,4 +1,5 @@
 function iitRegistration(){
+	//Establish debug mode
 	var debugmode = true;
 	function debugLog( debugOutput ){
 		if(debugmode === true){
@@ -6,27 +7,39 @@ function iitRegistration(){
 		}
 	}
 	debugLog("Debug Mode Active.");
+
+	//Define Functions
 	debugLog("Defining Functions.");
+
 	//Term load and parsing
 	function parseTerms() {
-		console.log("Loading Term Json");
+		debugLog("Loading Term Json");
 		$.getJSON( "json/terms.json", function ( termdata ) {
-			console.log("Term Json Loaded.");
+			debugLog("Term Json Loaded.");
+
 			var termArray = [];
+
+			debugLog("Capture Term Data");
 			$.each(termdata, function( termkey, termvalue ) {
 				if(termkey !== "terms") {
-					console.log("Term Data Fails Validation!");
+					termArray("Term Data Fails Validation!");
 					return;
 				}
-				console.log("Term Data Passes Validation!");
+				debugLog("Term Data Passes Validation!");
 				termArray = termvalue;
+			});
+
+			debugLog("Iterate Through Term Data");
+			$.each(termArray, function(termindex, termvalue){
+				debugLog(termindex);
+				debugLog(termvalue);
 			});
 		});
 	}
-	console.log( "Ready!" );
-	console.log( "Loading Terms!" );
+	debugLog( "Ready!" );
+	debugLog( "Loading Terms!" );
 	parseTerms();
-	console.log( "Loading Courses!" );
+	debugLog( "Loading Courses!" );
 };
 
 // Handle document ready
