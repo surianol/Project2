@@ -130,6 +130,12 @@ function iitRegistration(){
 			} else if(coursefield === "subjectname") {
 				$( newRow ).addClass("course_subject_" + courseValue);
 			} else if(coursefield === "description") {
+				var descriptionButton = document.createElement('input');
+				$(descriptionButton).addClass("coursedata_description_button");
+				$(descriptionButton).addClass("coursedata_description_button_unbound");
+				$(descriptionButton).attr("type","button");
+				$(descriptionButton).attr("value","...");
+				newRow.appendChild(descriptionButton);
 				$( currentCell ).hide();
 			}
 			
@@ -147,6 +153,10 @@ function iitRegistration(){
 			$(this).on("dblclick",{id: $(this).attr('id') }, toggleRegistration);
 			$(this).on("swiperight",{id: $(this).attr('id') }, toggleRegistration);
 			$(this).removeClass("registration_event_unbound");
+		});
+		$("input.coursedata_description_button_unbound").each(function() {
+			$(this).on("click",{id: $(this).attr('id') }, toggleDescription);
+			$(this).removeClass("coursedata_description_button_unbound");
 		});
 	}
 	
@@ -172,6 +182,13 @@ function iitRegistration(){
 	
 	function toggleDescription() {
 		debugLog("firing description hide/show!");
+		event.stopPropagation();
+		var descriptionItem = $(this).parent().find('span.coursedata_description');
+		if( $(descriptionItem).is(':hidden')) {
+			$(descriptionItem).show();
+		} else {
+			$(descriptionItem).hide();
+		}
 	}
 
 	debugLog( "Ready!" );
