@@ -24,3 +24,12 @@
 .coursedata_description {
 	display:block;
 }
+
+.coursedata_enddate {
+	display:block;
+}
+
+.coursedata_description_button {
+	width: 100%;
+	display:block;
+}
