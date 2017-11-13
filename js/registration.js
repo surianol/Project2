@@ -129,6 +129,8 @@ function iitRegistration(){
 				$( newRow ).addClass("course_credits_" + courseValue);
 			} else if(coursefield === "subjectname") {
 				$( newRow ).addClass("course_subject_" + courseValue);
+			} else if(coursefield === "description") {
+				$( currentCell ).hide();
 			}
 			
 			currentCell.appendChild(cellText);
@@ -141,6 +143,7 @@ function iitRegistration(){
 	
 	function bindCourseEvents() {
 		$("div.registration_event_unbound").each(function() {
+			$(this).on("click",{id: $(this).attr('id') }, toggleDescription);
 			$(this).on("dblclick",{id: $(this).attr('id') }, toggleRegistration);
 			$(this).on("swiperight",{id: $(this).attr('id') }, toggleRegistration);
 			$(this).removeClass("registration_event_unbound");
@@ -148,7 +151,7 @@ function iitRegistration(){
 	}
 	
 	function toggleRegistration() {
-		debugLog("firing event!");
+		debugLog("firing registration event!");
 		event.stopPropagation();
 		if( $(this).hasClass("registration_option") ) {
 			debugLog("Moved " + $(this).attr("id") + " to registered courses!");
@@ -165,6 +168,10 @@ function iitRegistration(){
 			$(this).on("swiperight",{id: $(this).attr('id') }, toggleRegistration);
 			$(this).detach().appendTo(document.getElementById( "available_courses" ));
 		}
+	}
+	
+	function toggleDescription() {
+		debugLog("firing description hide/show!");
 	}
 
 	debugLog( "Ready!" );

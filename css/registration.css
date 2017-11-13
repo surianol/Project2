@@ -4,11 +4,6 @@
 	registered_course - course tr is registered
 */
 
-.registration_hide {
-  display:none;
-  visibility: hidden;
-}
-
 /*special processing for display of course data*/
 .coursedata_name {
 	display:block;
