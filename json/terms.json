@@ -1,50 +1,50 @@
 {"terms":[
 	{
 		"Name":"Fall 2017",
-		"RegistrationDate:":"20160402",
-		"StartDate:":"20170821",
-		"AddDropDate":"20170902",
-		"WithdrawDate":"20171030",
-		"EndDate":"20171002"
+		"RegistrationDate:":"2016-04-02T23:59:59.999Z",
+		"StartDate:":"2017-08-21T23:59:59.999Z",
+		"AddDropDate":"2017-09-02T23:59:59.999Z",
+		"WithdrawDate":"2017-10-30T23:59:59.999Z",
+		"EndDate":"2017-10-02T23:59:59.999Z"
 	},
 	{
 		"Name":"Spring 2018",
-		"RegistrationDate:":"20171106",
-		"StartDate:":"20180108",
-		"AddDropDate":"20180120",
-		"WithdrawDate":"20180326",
-		"EndDate":"20180428"
+		"RegistrationDate:":"2017-11-06T23:59:59.999Z",
+		"StartDate:":"2018-01-08T23:59:59.999Z",
+		"AddDropDate":"2018-01-20T23:59:59.999Z",
+		"WithdrawDate":"2018-03-26T23:59:59.999Z",
+		"EndDate":"2018-04-28T23:59:59.999Z"
 	},
 	{
 		"Name":"Summer 2018 Session A",
-		"RegistrationDate:":"20180402",
-		"StartDate:":"20180521",
-		"AddDropDate":"20180530",
-		"WithdrawDate":"20180615",
-		"EndDate":"20180630"
+		"RegistrationDate:":"2018-04-02T23:59:59.999Z",
+		"StartDate:":"2018-05-21T23:59:59.999Z",
+		"AddDropDate":"2018-05-30T23:59:59.999Z",
+		"WithdrawDate":"2018-06-15T23:59:59.999Z",
+		"EndDate":"2018-06-30T23:59:59.999Z"
 	},
 	{
 		"Name":"Summer 2018 Session B",
-		"RegistrationDate:":"20180402",
-		"StartDate:":"20180604",
-		"AddDropDate":"20180608",
-		"WithdrawDate":"20180706",
-		"EndDate":"20180728"
+		"RegistrationDate:":"2018-04-02T23:59:59.999Z",
+		"StartDate:":"2018-06-04T23:59:59.999Z",
+		"AddDropDate":"2018-06-08T23:59:59.999Z",
+		"WithdrawDate":"2018-07-06T23:59:59.999Z",
+		"EndDate":"2018-07-28T23:59:59.999Z"
 	},
 	{
 		"Name":"Summer 2018 Session C",
-		"RegistrationDate:":"20180402",
-		"StartDate:":"20180702",
-		"AddDropDate":"20180706",
-		"WithdrawDate":"20180720",
-		"EndDate":"20180811"
+		"RegistrationDate:":"2018-04-02T23:59:59.999Z",
+		"StartDate:":"2018-07-02T23:59:59.999Z",
+		"AddDropDate":"2018-07-06T23:59:59.999Z",
+		"WithdrawDate":"2018-07-20T23:59:59.999Z",
+		"EndDate":"2018-08-11T23:59:59.999Z"
 	},
 	{
 		"Name":"Summer 2018 Session D",
-		"RegistrationDate:":"20180402",
-		"StartDate:":"20180521",
-		"AddDropDate":"20180530",
-		"WithdrawDate":"20180713",
-		"EndDate":"20180811"
+		"RegistrationDate:":"2018-04-02T23:59:59.999Z",
+		"StartDate:":"2018-05-21T23:59:59.999Z",
+		"AddDropDate":"2018-05-30T23:59:59.999Z",
+		"WithdrawDate":"2018-07-13T23:59:59.999Z",
+		"EndDate":"2018-08-11T23:59:59.999Z"
 	}
 ]}
