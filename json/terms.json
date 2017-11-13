@@ -1,6 +1,7 @@
 {"terms":[
 	{
 		"Name":"Fall 2017",
+		"SimpleName":"fall2017",
 		"RegistrationDate:":"2016-04-02T23:59:59.999Z",
 		"StartDate:":"2017-08-21T23:59:59.999Z",
 		"AddDropDate":"2017-09-02T23:59:59.999Z",
@@ -9,6 +10,7 @@
 	},
 	{
 		"Name":"Spring 2018",
+		"SimpleName":"spring2018",
 		"RegistrationDate:":"2017-11-06T23:59:59.999Z",
 		"StartDate:":"2018-01-08T23:59:59.999Z",
 		"AddDropDate":"2018-01-20T23:59:59.999Z",
@@ -17,6 +19,7 @@
 	},
 	{
 		"Name":"Summer 2018 Session A",
+		"SimpleName":"summer2018sessiona",
 		"RegistrationDate:":"2018-04-02T23:59:59.999Z",
 		"StartDate:":"2018-05-21T23:59:59.999Z",
 		"AddDropDate":"2018-05-30T23:59:59.999Z",
@@ -25,6 +28,7 @@
 	},
 	{
 		"Name":"Summer 2018 Session B",
+		"SimpleName":"summer2018sessionb",
 		"RegistrationDate:":"2018-04-02T23:59:59.999Z",
 		"StartDate:":"2018-06-04T23:59:59.999Z",
 		"AddDropDate":"2018-06-08T23:59:59.999Z",
@@ -33,6 +37,7 @@
 	},
 	{
 		"Name":"Summer 2018 Session C",
+		"SimpleName":"summer2018sessionc",
 		"RegistrationDate:":"2018-04-02T23:59:59.999Z",
 		"StartDate:":"2018-07-02T23:59:59.999Z",
 		"AddDropDate":"2018-07-06T23:59:59.999Z",
@@ -41,6 +46,7 @@
 	},
 	{
 		"Name":"Summer 2018 Session D",
+		"SimpleName":"summer2018sessiond",
 		"RegistrationDate:":"2018-04-02T23:59:59.999Z",
 		"StartDate:":"2018-05-21T23:59:59.999Z",
 		"AddDropDate":"2018-05-30T23:59:59.999Z",
