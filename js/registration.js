@@ -136,7 +136,7 @@ function iitRegistration(){
 	
 	function toggleRegistration() {
 		debugLog("firing event!");
-		alert(event.data.id);
+		alert($(this).attr("id"));
 	}
 
 	debugLog( "Ready!" );
