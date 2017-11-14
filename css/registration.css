@@ -14,21 +14,22 @@
 }
 
 .coursedata_subjectname {
-	display:block;
+	clear: right;
+	float: right;
 }
 
 .coursedata_description {
-	clear: all;
+	clear: right;
 	display:block;
 }
 
 .coursedata_starttime{
-	float: right;
+	display: block;
+}
+.coursedata_endtime{
+	display: block;
 }
 
-.coursedata_endtime{
-	float: right;
-}
 
 .coursedata_description_button {
 	width: 100%;
