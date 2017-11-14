@@ -4,7 +4,7 @@ http://www.modularscale.com/?1&em&1.333
 */
 html {
 	font-size: 1.333em;
-	line-height: 1.777em;
+	line-height: 1.333em;
 }
 
 input[type=button] {
@@ -21,6 +21,7 @@ input[type=button] {
 
 .coursedata_name {
 	display:block;
+	font-size: 1.777em;
 }
 
 .coursedata_coursenumber {
@@ -58,7 +59,6 @@ input[type=button] {
 @media (max-width: 575px) {
 	html {
 		font-size: 0.75em;
-		line-height: 1em;
 	}
 	
 	.registration_option, .registered_course {
@@ -67,13 +67,16 @@ input[type=button] {
 		padding: 3px;
 		margin: auto;
 	}
+	
+	.coursedata_name {
+		font-size: 1.333em;
+	}
 }
 
 /*Small devices, landscape phones*/
 @media (min-width: 576px) and (max-width: 767px) {
 	html {
 		font-size: 1em;
-		line-height: 1.333em;
 	}
 
 	.registration_option, .registered_course {
@@ -82,13 +85,16 @@ input[type=button] {
 		padding: 4px;
 		margin: auto;
 	}
+	
+	.coursedata_name {
+		font-size: 1.333em;
+	}
 }
 
 /*Medium devices, tablets*/
 @media (min-width: 768px) {
 	html {
 		font-size: 1.333em;
-		line-height: 1.777em;
 	}
 	
 	.registration_option, .registered_course {
@@ -96,5 +102,9 @@ input[type=button] {
 		border-radius: 5px;
 		padding: 5px;
 		margin: auto;
+	}
+	
+	.coursedata_name {
+		font-size: 1.333em;
 	}
 }
