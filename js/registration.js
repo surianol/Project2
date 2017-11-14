@@ -34,21 +34,21 @@ function iitRegistration(){
 			$.each(tempTermArray, function(termindex, termdefinition){
 				debugLog("Processing " + termdefinition.name);
 				//Start at the end points to determine ranges, this means less checks overall.
-				if(Date.parse(termdefinition.RegistrationDate) < Date.now() || Date.parse(termdefinition.EndDate) > Date.now() ) {
+				if(Date.parse(termdefinition.RegistrationDate) < Date.now() || Date.parse(termdefinition.EndDate) < Date.now() ) {
 					debugLog("Not in scope");
-				} else if (Date.parse(termdefinition.StartDate) < Date.now()) {
+				} else if (Date.parse(termdefinition.StartDate) > Date.now()) {
 					debugLog("Registration");
 					termArray.push({name:termdefinition.Name,simplename:termdefinition.SimpleName,mode:'Registration'});
 					debugLog(termArray);
-				} else if (Date.parse(termdefinition.AddDropDate) < Date.now()) {
+				} else if (Date.parse(termdefinition.AddDropDate) > Date.now()) {
 					debugLog("AddDrop");
 					termArray.push({name:termdefinition.Name,simplename:termdefinition.SimpleName,mode:'AddDrop'});
 					debugLog(termArray);
-				} else if (Date.parse(termdefinition.WithdrawDate) < Date.now()) {
+				} else if (Date.parse(termdefinition.WithdrawDate) > Date.now()) {
 					debugLog("Withdraw");
 					termArray.push({name:termdefinition.Name,simplename:termdefinition.SimpleName,mode:'Withdraw'});
 					debugLog(termArray);
-				} else if (Date.parse(termdefinition.EndDate) < Date.now()) {
+				} else if (Date.parse(termdefinition.EndDate) > Date.now()) {
 					debugLog("No changes");
 					termArray.push({name:termdefinition.Name,simplename:termdefinition.SimpleName,mode:'NoChange'});
 					debugLog(termArray);
@@ -98,7 +98,7 @@ function iitRegistration(){
 	
 	function processCourse(termObject, courseObject, courseTable) {
 		var newRow = document.createElement('div');
-		$( newRow ).addClass(termObject.simplename);
+		$( newRow ).data("term",termObject.simplename);
 		$( newRow ).addClass("registration_option");
 		$( newRow ).addClass("registration_event_unbound");
 		$( newRow ).attr('id', termObject.simplename + "_" + courseObject.subjectcode + courseObject.coursenumber);
