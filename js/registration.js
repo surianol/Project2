@@ -32,10 +32,12 @@ function iitRegistration(){
 
 			debugLog("Iterate Through Term Data");
 			$.each(tempTermArray, function(termindex, termdefinition){
-				debugLog("Processing " + termdefinition.name);
+				debugLog("Processing " + termdefinition.Name);
 				//Start at the end points to determine ranges, this means less checks overall.
-				if(Date.parse(termdefinition.RegistrationDate) < Date.now() || Date.parse(termdefinition.EndDate) < Date.now() ) {
-					debugLog("Not in scope");
+				if(Date.now() < Date.parse(termdefinition.RegistrationDate) ) {
+					debugLog("Before Registration Date");
+				} else if( Date.parse(termdefinition.EndDate) < Date.now() ) {
+					debugLog("After End Date");
 				} else if (Date.parse(termdefinition.StartDate) > Date.now()) {
 					debugLog("Registration");
 					termArray.push({name:termdefinition.Name,simplename:termdefinition.SimpleName,mode:'Registration'});
