@@ -20,8 +20,17 @@ input[type=button] {
 }
 
 .coursedata_name {
-	display:block;
+	display: block;
 	font-size: 1.777em;
+	width: 100%;
+}
+
+.registration_option .coursedata_name {
+	background-color: grey;
+}
+
+.registered_course .coursedata_name {
+	background-color: white;
 }
 
 .coursedata_coursenumber {
