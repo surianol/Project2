@@ -1,1 +1,1 @@
-# project2
+# This repository contains our Project #2 files
