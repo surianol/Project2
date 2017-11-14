@@ -4,6 +4,7 @@ http://www.modularscale.com/?1&em&1.333
 */
 html {
 	font-size: 1.333em;
+	line-height: 1.777em;
 }
 
 input[type=button] {
@@ -57,6 +58,7 @@ input[type=button] {
 @media (max-width: 575px) {
 	html {
 		font-size: 0.75em;
+		line-height: 1em;
 	}
 	
 	.registration_option, .registered_course {
@@ -71,6 +73,7 @@ input[type=button] {
 @media (min-width: 576px) and (max-width: 767px) {
 	html {
 		font-size: 1em;
+		line-height: 1.333em;
 	}
 
 	.registration_option, .registered_course {
@@ -85,6 +88,7 @@ input[type=button] {
 @media (min-width: 768px) {
 	html {
 		font-size: 1.333em;
+		line-height: 1.777em;
 	}
 	
 	.registration_option, .registered_course {
