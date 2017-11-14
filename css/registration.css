@@ -75,7 +75,7 @@ main {
 	}
 	
 	main {
-		height: 400px;
+		max-height: 400px;
 	}
 	
 	.registration_option, .registered_course {
@@ -98,7 +98,7 @@ main {
 	}
 	
 	main {
-		height: 533px;
+		max-height: 533px;
 	}
 
 	.registration_option, .registered_course {
@@ -121,7 +121,7 @@ main {
 	}
 
 	main {
-		height: 711px;
+		max-height: 711px;
 	}
 	
 	.registration_option, .registered_course {
