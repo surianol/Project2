@@ -48,12 +48,12 @@ function iitRegistration(){
 					debugLog(termArray);
 				} else if (Date.parse(termdefinition.WithdrawDate) > Date.now()) {
 					debugLog("Withdraw");
-					termArray.push({name:termdefinition.Name,simplename:termdefinition.SimpleName,mode:'Withdraw'});
-					debugLog(termArray);
+					/*termArray.push({name:termdefinition.Name,simplename:termdefinition.SimpleName,mode:'Withdraw'});
+					debugLog(termArray);*/
 				} else if (Date.parse(termdefinition.EndDate) > Date.now()) {
 					debugLog("No changes");
-					termArray.push({name:termdefinition.Name,simplename:termdefinition.SimpleName,mode:'NoChange'});
-					debugLog(termArray);
+					/*termArray.push({name:termdefinition.Name,simplename:termdefinition.SimpleName,mode:'NoChange'});
+					debugLog(termArray);*/
 				}
 			});
 			debugLog("Term Iteration Done");
