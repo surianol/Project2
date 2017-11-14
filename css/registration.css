@@ -22,11 +22,11 @@
 	display:block;
 }
 
-.coursedata_endtime {
+.coursedata_starttime{
 	float: right;
 }
 
-.coursedata_starttime {
+.coursedata_endtime{
 	float: right;
 }
 

@@ -123,12 +123,16 @@ function iitRegistration(){
 			
 			if(coursefield === "days") {
 				$.each(courseValue, function( dayindex, dayname) {
-					$( newRow ).addClass("course_" + dayname);
+					$( newRow ).data(dayname, true);
 				});
 			} else if(coursefield === "credits") {
-				$( newRow ).addClass("course_credits_" + courseValue);
+				$( newRow ).data("credits",courseValue);
 			} else if(coursefield === "subjectname") {
-				$( newRow ).addClass("course_subject_" + courseValue);
+				$( newRow ).data("subject",courseValue);
+			} else if(coursefield === "starttime") {
+				$( newRow ).data("starttime",courseValue);
+			} else if(coursefield === "endtime") {
+				$( newRow ).data("endtime",courseValue);
 			}
 			
 			currentCell.appendChild(cellText);
