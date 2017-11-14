@@ -9,18 +9,12 @@
 	display:block;
 }
 
-.coursedata_credits {
-	clear: right;
-	float: right;
+.coursedata_coursenumber {
+	display: inline-block;
 }
 
 .coursedata_subjectname {
 	float: right;
-}
-
-.coursedata_description {
-	clear: right;
-	display:block;
 }
 
 .coursedata_starttime{
@@ -30,6 +24,15 @@
 	display: block;
 }
 
+.coursedata_credits {
+	clear: right;
+	float: right;
+}
+
+.coursedata_description {
+	clear: right;
+	display: block;
+}
 
 .coursedata_description_button {
 	width: 100%;
