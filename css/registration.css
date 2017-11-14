@@ -11,6 +11,10 @@ input[type=button] {
 	font-size: 1em;
 }
 
+main {
+	overflow-y: auto;
+}
+
 .registration_option {
 	background-color: #777777;
 }
@@ -26,7 +30,7 @@ input[type=button] {
 }
 
 .registration_option .coursedata_name {
-	background-color: #CC0000;
+	background-color: #848484;
 }
 
 .registered_course .coursedata_name {
@@ -70,6 +74,10 @@ input[type=button] {
 		font-size: 0.75em;
 	}
 	
+	main {
+		height: 400px;
+	}
+	
 	.registration_option, .registered_course {
 		width: 300px;
 		border-radius: 3px;
@@ -87,6 +95,10 @@ input[type=button] {
 @media (min-width: 576px) and (max-width: 767px) {
 	html {
 		font-size: 1em;
+	}
+	
+	main {
+		height: 533px;
 	}
 
 	.registration_option, .registered_course {
@@ -106,6 +118,10 @@ input[type=button] {
 @media (min-width: 768px) {
 	html {
 		font-size: 1.333em;
+	}
+
+	main {
+		height: 711px;
 	}
 	
 	.registration_option, .registered_course {
