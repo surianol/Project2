@@ -39,3 +39,33 @@
 	clear: all;
 	display: block;
 }
+
+/*Styling!*/
+/*
+Perfect 4th modular scale.
+http://www.modularscale.com/?1&em&1.333
+*/
+html {
+	font-size: 1.333em;
+}
+
+/*phones, custom*/
+@media (max-width: 575px) {
+	html {
+		font-size: 0.75em;
+	}
+}
+
+/*Small devices, landscape phones*/
+@media (min-width: 576px) and (max-width: 767px) {
+	html {
+		font-size: 1em;
+	}
+}
+
+/*Medium devices, tablets*/
+@media (min-width: 768px) {
+	html {
+		font-size: 1.333em;
+	}
+}
