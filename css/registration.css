@@ -49,6 +49,18 @@ html {
 	font-size: 1.333em;
 }
 
+input[type=button] {
+	font-size: 1em;
+}
+
+.registration_option {
+	background-color: #777777;
+}
+
+.registered_course {
+	background-color: green;
+}
+
 /*phones, custom*/
 @media (max-width: 575px) {
 	html {
@@ -57,8 +69,11 @@ html {
 	
 	.registration_option, .registered_course {
 		width: 300px;
+		border-radius: 3px;
 		margin: auto;
 	}
+	
+	
 }
 
 /*Small devices, landscape phones*/
@@ -66,8 +81,10 @@ html {
 	html {
 		font-size: 1em;
 	}
+
 	.registration_option, .registered_course {
 		max-width: 400px;
+		border-radius: 4px;
 		margin: auto;
 	}
 }
@@ -80,6 +97,7 @@ html {
 	
 	.registration_option, .registered_course {
 		max-width: 533px;
+		border-radius: 5px;
 		margin: auto;
 	}
 }
