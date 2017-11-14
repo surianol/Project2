@@ -73,7 +73,8 @@ input[type=button] {
 	.registration_option, .registered_course {
 		width: 300px;
 		border-radius: 3px;
-		padding: 3px;
+		padding-left: 3px;
+		padding-right: 3px;
 		margin: auto;
 	}
 	
@@ -91,7 +92,8 @@ input[type=button] {
 	.registration_option, .registered_course {
 		max-width: 400px;
 		border-radius: 4px;
-		padding: 4px;
+		padding-left: 4px;
+		padding-right: 4px;
 		margin: auto;
 	}
 	
@@ -109,7 +111,8 @@ input[type=button] {
 	.registration_option, .registered_course {
 		max-width: 533px;
 		border-radius: 5px;
-		padding: 5px;
+		padding-left: 5px;
+		padding-right: 5px;
 		margin: auto;
 	}
 	
