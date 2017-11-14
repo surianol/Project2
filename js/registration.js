@@ -196,8 +196,10 @@ function iitRegistration(){
 		event.stopPropagation();
 		var descriptionItem = $(this).parent().find('span.coursedata_description');
 		if( $(descriptionItem).is(':hidden')) {
+			$(this).attr("value","Less ...");
 			$(descriptionItem).show();
 		} else {
+			$(this).attr("value","...");
 			$(descriptionItem).hide();
 		}
 	}
