@@ -7,6 +7,10 @@ function iitRegistration(){
 		}
 	}
 	debugLog("Debug Mode Active.");
+	
+	/*hide mobile loading*/
+	$( "div.ui-loader").hide();
+	
 
 	//Define Variables
 	debugLog("Defining Variables");
