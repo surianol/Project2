@@ -54,6 +54,11 @@ html {
 	html {
 		font-size: 0.75em;
 	}
+	
+	.registration_option, .registered_course {
+		width: 300px;
+		margin: auto;
+	}
 }
 
 /*Small devices, landscape phones*/
@@ -61,11 +66,20 @@ html {
 	html {
 		font-size: 1em;
 	}
+	.registration_option, .registered_course {
+		max-width: 400px;
+		margin: auto;
+	}
 }
 
 /*Medium devices, tablets*/
 @media (min-width: 768px) {
 	html {
 		font-size: 1.333em;
+	}
+	
+	.registration_option, .registered_course {
+		max-width: 533px;
+		margin: auto;
 	}
 }
