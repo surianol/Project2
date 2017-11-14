@@ -1,10 +1,23 @@
-/*Dynamic class additions to table rows:
-	term names such as fall2017, spring2018
-	registration_option - course tr is not registered
-	registered_course - course tr is registered
+/*
+Perfect 4th modular scale.
+http://www.modularscale.com/?1&em&1.333
 */
+html {
+	font-size: 1.333em;
+}
 
-/*special processing for display of course data*/
+input[type=button] {
+	font-size: 1em;
+}
+
+.registration_option {
+	background-color: #777777;
+}
+
+.registered_course {
+	background-color: green;
+}
+
 .coursedata_name {
 	display:block;
 }
@@ -38,27 +51,6 @@
 	width: 100%;
 	clear: all;
 	display: block;
-}
-
-/*Styling!*/
-/*
-Perfect 4th modular scale.
-http://www.modularscale.com/?1&em&1.333
-*/
-html {
-	font-size: 1.333em;
-}
-
-input[type=button] {
-	font-size: 1em;
-}
-
-.registration_option {
-	background-color: #777777;
-}
-
-.registered_course {
-	background-color: green;
 }
 
 /*phones, custom*/
