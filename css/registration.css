@@ -10,11 +10,11 @@
 }
 
 .coursedata_credits {
+	clear: right;
 	float: right;
 }
 
 .coursedata_subjectname {
-	clear: right;
 	float: right;
 }
 
