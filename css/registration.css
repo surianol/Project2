@@ -136,8 +136,30 @@ main {
 		font-size: 1.333em;
 	}
 	
+	.registration_wrapper {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 10px;
+		grid-auto-rows: minmax(100px, auto);
+	}
+	
+	#available_courses {
+		grid-column: 1 / 1;
+		grid-row: 2 / 2;
+	}
+	
 	#registered_courses {
-		min-width: 533px;
-		float: right;
+		grid-column: 2 / 2;
+		grid-row: 2 / 2;
+	}
+	
+	#weekly_schedule {
+		grid-column: 2 / 2;
+		grid-row: 1 / 1;
+	}
+	
+	#course_searchbars {
+		grid-column: 1 / 1;
+		grid-row: 1 / 1;
 	}
 }
