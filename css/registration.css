@@ -10,12 +10,12 @@ html {
 }
 
 body {
-  background-color: #635D64;
-  font-family: "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
+  /*background-color: #635D64;
+  font-family: "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;*/
 }
 
 .registration_wrapper {
-  background-color: #857B7F;
+  /*background-color: #857B7F;*/
 }
 
 input[type=button] {
@@ -26,21 +26,26 @@ main {
 }
 
 header {
-  background-color: #99908E;
-  width: 100%;
+  /*background-color: #99908E;*/
+  /*width: 100%;*/
 }
 
 footer {
-  background-color: #99908E;
+  /*background-color: #99908E;*/
   width: 100%;
 }
 
+#available_courses, #registered_courses {
+  display: block;
+  border: 2px groove;
+}
+
 .registration_option {
-  background-color: #6B5A60;
+  /*background-color: #6B5A60;*/
 }
 
 .registered_course {
-  background-color: #5E4B52;
+  /*background-color: #5E4B52;*/
 }
 
 .coursedata_name {
@@ -49,10 +54,11 @@ footer {
   width: 100%;
 }
 
-h2 {
-  font-size: 1.777em;
+h3 {
   width: 100%;
-  background-color: #776A6F;
+  background-color: black;
+  color: white;
+  /*background-color: #776A6F;*/
 }
 
 .coursedata_coursenumber {
@@ -86,7 +92,7 @@ h2 {
   display: block;
   text-align: center;
   border: none;
-  background-color: #BDA089;
+  /*background-color: #BDA089;*/
 }
 
 .img360, .img576, .img768 {
@@ -114,7 +120,7 @@ h2 {
     margin: auto;
   }
   
-  #available_courses, #registered_courses, #weekly_schedule, #course_searchbars, header, footer {
+  #available_courses, #registered_courses, #weekly_schedule, #course_searchbars, footer {
     padding-left: 3px;
     padding-right: 3px;
     margin-bottom: 6px;
