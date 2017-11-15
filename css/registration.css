@@ -25,6 +25,16 @@ main {
 	overflow-y: auto;
 }
 
+header {
+	background-color: #99908E;
+	width: 100%;
+}
+
+footer {
+	background-color: #99908E;
+	width: 100%;
+}
+
 .registration_option {
 	background-color: #6B5A60;
 }
@@ -165,12 +175,12 @@ h2 {
 	}
 	
 	header {
-		grid-column: 1 / 2;
+		grid-column-end: span 2;
 		grid-row: 1 / 1;
 	}
 
 	footer {
-		grid-column: 1 / 2;
+		grid-column-end: span 2;
 		grid-row: 4 / 4;
 	}
 }
