@@ -1,0 +1,236 @@
+/*
+Color Pallette: http://paletton.com/#uid=55l0u0k2ljc6hnI3vhb50fr6wdx
+Perfect 4th modular scale.
+http://www.modularscale.com/?1&em&1.333
+*/
+
+html {
+  font-size: 1.333em;
+  line-height: 1.333em;
+}
+
+body {
+  background-color: #635D64;
+  font-family: "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
+}
+
+.registration_wrapper {
+  background-color: #857B7F;
+}
+
+input[type=button] {
+  font-size: 1em;
+}
+
+main {
+}
+
+header {
+  background-color: #99908E;
+  width: 100%;
+}
+
+footer {
+  background-color: #99908E;
+  width: 100%;
+}
+
+.registration_option {
+  background-color: #6B5A60;
+}
+
+.registered_course {
+  background-color: #5E4B52;
+}
+
+.coursedata_name {
+  display: block;
+  font-size: 1.333em;
+  width: 100%;
+}
+
+h2 {
+  font-size: 1.777em;
+  width: 100%;
+  background-color: #776A6F;
+}
+
+.coursedata_coursenumber {
+  display: inline-block;
+}
+
+.coursedata_subjectname {
+  float: right;
+}
+
+.coursedata_starttime{
+  display: block;
+}
+.coursedata_endtime{
+  display: block;
+}
+
+.coursedata_credits {
+  clear: right;
+  float: right;
+}
+
+.coursedata_description {
+  clear: right;
+  display: block;
+}
+
+.coursedata_description_button {
+  width: 100%;
+  clear: all;
+  display: block;
+  text-align: center;
+  border: none;
+  background-color: #BDA089;
+}
+
+.img360, .img576, .img768 {
+  display: none;
+}
+
+/*phones, custom*/
+@media (max-width: 575px) {
+  html {
+    font-size: 0.75em;
+  }
+  .img360 {
+    display: block;
+  }
+
+  .img576, .img768 {
+    display: none;
+  }
+  
+  .registration_option, .registered_course {
+    width: 300px;
+    border-radius: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+    margin: auto;
+  }
+  
+  #available_courses, #registered_courses, #weekly_schedule, #course_searchbars, header, footer {
+    padding-left: 3px;
+    padding-right: 3px;
+    margin-bottom: 6px;
+  }
+
+  .registration_wrapper {
+    max-width: 360px;
+  }
+}
+
+/*Small devices, landscape phones*/
+@media (min-width: 576px) and (max-width: 767px) {
+  html {
+    font-size: 1em;
+  }
+  
+  .img576 {
+    display: block;
+  }
+  
+  .img360, .img768 {
+    display: none;
+  }
+
+  .registration_option, .registered_course {
+    max-width: 400px;
+    border-radius: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin: auto;
+  }
+  
+  #available_courses, #registered_courses, #weekly_schedule, #course_searchbars, header, footer {
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-bottom: 8px;
+  }
+
+  .registration_wrapper {
+    max-width: 576px;
+  }
+}
+
+/*Medium devices, tablets*/
+@media (min-width: 768px) {
+  html {
+    font-size: 1.333em;
+  }
+  
+  .img768 {
+    display: block;
+  }
+
+  .img360, .img576  {
+    display: none;
+  }
+  
+  .registration_option, .registered_course {
+    max-width: 533px;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: auto;
+  }
+  
+  .registration_wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    max-width: 1100px;
+    margin: auto;
+  }
+  
+  #available_courses {
+    grid-column: 1 / 1;
+    grid-row: 3 / 3;
+    max-width: 533px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
+  #registered_courses {
+    grid-column: 2 / 2;
+    grid-row: 3 / 3;
+    max-width: 533px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
+  #weekly_schedule {
+    grid-column: 2 / 2;
+    grid-row: 2 / 2;
+    max-width: 533px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
+  #course_searchbars {
+    grid-column: 1 / 1;
+    grid-row: 2 / 2;
+    max-width: 533px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
+  header {
+    grid-column-end: span 2;
+    grid-row: 1 / 1;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  footer {
+    grid-column-end: span 2;
+    grid-row: 4 / 4;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
