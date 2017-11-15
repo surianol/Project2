@@ -1,0 +1,79 @@
+{"spring2018":[
+	{
+		"name":"Introduction to the Profession",
+		"subjectcode":"CS",
+		"coursenumber":"100",
+		"subjectname":"Computer Science",
+		"starttime":"08:00",
+		"endtime":"09:30",
+		"credits":2,
+		"days":["Monday","Wednesday","Friday"],
+		"description":"An introduction to science and engineering as a profession. Examines the problem-solving process used in engineering and science. Emphasizes the interdisciplinary and international nature of problem-solving and the need to evaluate solutions in terms of a variety of constraints: computational, financial, and social."
+	},
+	{
+		"name":"Introduction to Computer Programming for Engineers",
+		"subjectcode":"CS",
+		"coursenumber":"104",
+		"subjectname":"Computer Science",
+		"starttime":"17:00",
+		"endtime":"18:00",
+		"credits":2,
+		"days":["Tuesday","Thursday"],
+		"description":"Introduces the use of high-level programming language as a problem-solving tool in engineering including basic data structures and algorithms, structured programming techniques, and software documentation. Designed for students who have had little or no prior experience with computer programming. Students should only take one of these courses (CS 104, CS 105, CS 110, CS 115)."
+	},
+	{
+		"name":"Making Strategic Decisions in the Marketplace",
+		"subjectcode":"ECON",
+		"coursenumber":"151",
+		"subjectname":"Economics",
+		"starttime":"11:00",
+		"endtime":"12:30",
+		"credits":3,
+		"days":["Monday","Wednesday","Friday"],
+		"description":"This course develops and applies economic models to understand the behavior of firms and consumers in the marketplace. The course explores microeconomic concepts such as demand and supply, market structures and pricing, market efficiency, public goods, externalities, and equilibrium. Combining knowledge from microeconomics and game theory, students will study interactions among firms and consumers given a wide range of market conditions, regulatory regimes, and competitive landscapes."
+	},
+	{
+		"name":"Fundamentals of Web Development",
+		"subjectcode":"ITMD",
+		"coursenumber":"361",
+		"subjectname":"ITM Development",
+		"starttime":"13:30",
+		"endtime":"14:45",
+		"credits":3,
+		"days":["Monday","Wednesday","Friday"],
+		"description":"This course will cover the creation of Web pages and sites using HTML, CSS, Javascript, jQuery, and graphical applications as well as the client and server architecture of the Internet and related web technologies. The creation and deployment of modern, standards-compliant web pages are addressed. Students create and deploy a Web site with multiple pages and cross-linked structures."
+	},
+	{
+		"name":"Human-Computer Interaction and Web Design",
+		"subjectcode":"ITMD",
+		"coursenumber":"362",
+		"subjectname":"ITM Development",
+		"starttime":"13:30",
+		"endtime":"14:45",
+		"credits":3,
+		"days":["Tuesday","Thursday"],
+		"description":"Students in this course will learn the importance of human-computer interaction design and the effectiveness of user-centered design. The course will cover a survey of methods frequently used by the HCI profession, such as usability testing and prototyping, as well as general design principles and how to use design guidelines. A particular emphasis will be placed on usability for Web site engineering, and students will apply knowledge from the field in the design and construction of user-centered Web sites."
+	},
+	{
+		"name":"Intermediate Software Development",
+		"subjectcode":"ITMD",
+		"coursenumber":"411",
+		"subjectname":"ITM Development",
+		"starttime":"09:30",
+		"endtime":"12:45",
+		"credits":3,
+		"days":["Friday"],
+		"description":"This course covers a broad spectrum of object-oriented programming concepts and application programming interfaces. The student considers the details of object-orientated development in topics of multi-threading, data structure collections, stream I/O and client interfaces. Software engineering topics of packaging and deployment are covered as well. Hands-on exercises reinforce concepts taught throughout the course."
+	},
+	{
+		"name":"Advanced Structured and Systems Programming",
+		"subjectcode":"ITMD",
+		"coursenumber":"412",
+		"subjectname":"ITM Development",
+		"starttime":"14:00",
+		"endtime":"17:00",
+		"credits":3,
+		"days":["Monday"],
+		"description":"Structured programming continues with advanced concepts including strings, arrays, pointers, data structures, file manipulation, and dynamic memory management. Students create more complex applications that work with user input, manipulate user supplied text or text obtained from a file, apply standard library routines for working with literal text, use pointers to store complex structures within arrays, and read and write data from files, the console, and the terminal. The object-oriented programming (OOP) paradigm is covered in depth including the philosophy of OOP, classes and objects, inheritance, template classes, and making use of class libraries."
+	}
+]}

@@ -1,0 +1,13 @@
+{"fall2017":[
+	{
+		"name":"Making Strategic Decisions in the Marketplace",
+		"subjectcode":"ECON",
+		"coursenumber":"151",
+		"subjectname":"Economics",
+		"starttime":"11:00",
+		"endtime":"12:30",
+		"credits":3,
+		"days":["Monday","Wednesday","Friday"],
+		"description":"This course develops and applies economic models to understand the behavior of firms and consumers in the marketplace. The course explores microeconomic concepts such as demand and supply, market structures and pricing, market efficiency, public goods, externalities, and equilibrium. Combining knowledge from microeconomics and game theory, students will study interactions among firms and consumers given a wide range of market conditions, regulatory regimes, and competitive landscapes."
+	}
+]}
