@@ -89,13 +89,21 @@ h2 {
 	background-color: #BDA089;
 }
 
+.img360, .img576, .img768 {
+	display: none;
+}
+
 /*phones, custom*/
 @media (max-width: 575px) {
 	html {
 		font-size: 0.75em;
 	}
-	
-	main {
+	.img360 {
+		display: block;
+	}
+
+	.img576, .img768 {
+		display: none;
 	}
 	
 	.registration_option, .registered_course {
@@ -119,7 +127,12 @@ h2 {
 		font-size: 1em;
 	}
 	
-	main {
+	.img576 {
+		display: block;
+	}
+	
+	.img360, .img768 {
+		display: none;
 	}
 
 	.registration_option, .registered_course {
@@ -142,8 +155,13 @@ h2 {
 	html {
 		font-size: 1.333em;
 	}
+	
+	.img768 {
+		display: block;
+	}
 
-	main {
+	.img360, .img576  {
+		display: none;
 	}
 	
 	.registration_option, .registered_course {
