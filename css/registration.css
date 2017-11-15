@@ -1,10 +1,16 @@
 /*
+Color Pallette: http://paletton.com/#uid=55l0u0k2ljc6hnI3vhb50fr6wdx
 Perfect 4th modular scale.
 http://www.modularscale.com/?1&em&1.333
 */
+
 html {
 	font-size: 1.333em;
 	line-height: 1.333em;
+}
+
+body {
+	background-color: #635D64;
 }
 
 input[type=button] {
@@ -60,6 +66,9 @@ main {
 	display: block;
 	text-align: center;
 	border: none;
+}
+
+.registration_wrapper {
 }
 
 /*phones, custom*/
