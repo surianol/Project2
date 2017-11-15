@@ -122,7 +122,7 @@ section h3 {
     margin: auto;
   }
   
-  #available_courses, #registered_courses, #weekly_schedule, #course_searchbars, footer {
+  #available_courses, #registered_courses, #weekly_schedule, #course_searchbars {
     padding-left: 3px;
     padding-right: 3px;
     margin-bottom: 6px;
@@ -155,7 +155,7 @@ section h3 {
     margin: auto;
   }
   
-  #available_courses, #registered_courses, #weekly_schedule, #course_searchbars, header, footer {
+  #available_courses, #registered_courses, #weekly_schedule, #course_searchbars {
     padding-left: 4px;
     padding-right: 4px;
     margin-bottom: 8px;
@@ -228,17 +228,5 @@ section h3 {
     padding-right: 5px;
   }
   
-  header {
-    grid-column-end: span 2;
-    grid-row: 1 / 1;
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-
-  footer {
-    grid-column-end: span 2;
-    grid-row: 4 / 4;
-    padding-left: 5px;
-    padding-right: 5px;
-  }
+ 
 }
