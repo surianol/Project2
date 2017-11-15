@@ -27,7 +27,7 @@ main {
 
 header {
   /*background-color: #99908E;*/
-  width: 100%;
+  /*width: 100%;*/
 }
 
 footer {
@@ -120,7 +120,7 @@ h3 {
     margin: auto;
   }
   
-  #available_courses, #registered_courses, #weekly_schedule, #course_searchbars, header, footer {
+  #available_courses, #registered_courses, #weekly_schedule, #course_searchbars, footer {
     padding-left: 3px;
     padding-right: 3px;
     margin-bottom: 6px;
