@@ -119,6 +119,10 @@ h2 {
     padding-right: 3px;
     margin-bottom: 6px;
   }
+
+  .registration_wrapper {
+    max-width: 360px;
+  }
 }
 
 /*Small devices, landscape phones*/
@@ -147,6 +151,10 @@ h2 {
     padding-left: 4px;
     padding-right: 4px;
     margin-bottom: 8px;
+  }
+
+  .registration_wrapper {
+    max-width: 576px;
   }
 }
 
