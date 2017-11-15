@@ -35,6 +35,11 @@ footer {
   width: 100%;
 }
 
+#available_courses, #registered_courses {
+  display: block;
+  border: 2px groove;
+}
+
 .registration_option {
   background-color: #6B5A60;
 }
