@@ -264,23 +264,53 @@ textarea {
   font: inherit; /* 2 */
 }
 
-header h3 {
-  margin-top: 0;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
-  padding-left: 15%;
-  background-color: black;
-  color: white;
+nav#links {
+	text-align: center;
+	background-color: #cccccc;
 }
-header h1 {
-  margin-top: 0;
-  margin-bottom: 0;
-  background-color: white;
-  color: black;
+
+nav#links ul {
+	list-style-type: none;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
 }
-fieldset, fieldset {
-  margin-bottom: 2em;
+
+nav#links ul li {
+	float: left;
 }
+
+nav#links ul li a {
+	display: block;
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+	text-align: center;
+	width: 100px;
+	padding: 10px 0px 8px 0px;
+	border-radius: 15px;
+}
+
+nav#links ul li a:hover {
+	background-color: #8c8c8c;
+	text-decoration: underline;
+}
+
+section#content {
+	margin: auto;
+	width: 100%;
+	text-align: center;
+}
+
+p#welcome-footer {
+	margin-top: 3.5rem;
+}
+
+img {
+	width: 100%;
+}
+
 footer {
 	position: relative;
 	left: 0;
@@ -288,37 +318,4 @@ footer {
 	height: 60px;
 	width: 100%;
 	text-align: center;
-}
-
-#login-and-info {
-  margin: auto;
-  max-width: 30em;
-}
-#username-line,
-#password-line {
-  align-content: center;
-  padding-top: 0.4em;
-  padding-bottom: 0.4em;
-}
-#button-line {
-  align-content: center;
-  padding-top: 1.6em;
-  padding-bottom: 1.6em;
-}
-
-#find-pw-line {
-}
-
-.Middle {
-  margin: auto;
-  width: 80%;
-  text-align: center;
-  padding: 35px;
-}
-.link-text {
-  color: red;
-}
-
-img {
-	width: 100%;
 }
