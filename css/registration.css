@@ -140,26 +140,32 @@ main {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 10px;
+		max-width: 1100px;
+		margin: auto;
 	}
 	
 	#available_courses {
 		grid-column: 1 / 1;
 		grid-row: 3 / 3;
+		max-width: 533px;
 	}
 	
 	#registered_courses {
 		grid-column: 2 / 2;
 		grid-row: 3 / 3;
+		max-width: 533px;
 	}
 	
 	#weekly_schedule {
 		grid-column: 2 / 2;
 		grid-row: 2 / 2;
+		max-width: 533px;
 	}
 	
 	#course_searchbars {
 		grid-column: 1 / 1;
 		grid-row: 2 / 2;
+		max-width: 533px;
 	}
 	
 	header {
