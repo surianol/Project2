@@ -318,3 +318,7 @@ footer {
 .link-text {
   color: red;
 }
+
+img {
+	width: 100%;
+}
