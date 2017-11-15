@@ -263,3 +263,58 @@ textarea {
   -webkit-appearance: button; /* 1 */
   font: inherit; /* 2 */
 }
+
+header h3 {
+  margin-top: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  padding-left: 15%;
+  background-color: black;
+  color: white;
+}
+header h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: white;
+  color: black;
+}
+fieldset, fieldset {
+  margin-bottom: 2em;
+}
+footer {
+	position: relative;
+	left: 0;
+	bottom: 0;
+	height: 60px;
+	width: 100%;
+	text-align: center;
+}
+
+#login-and-info {
+  margin: auto;
+  max-width: 30em;
+}
+#username-line,
+#password-line {
+  align-content: center;
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+}
+#button-line {
+  align-content: center;
+  padding-top: 1.6em;
+  padding-bottom: 1.6em;
+}
+
+#find-pw-line {
+}
+
+.Middle {
+  margin: auto;
+  width: 80%;
+  text-align: center;
+  padding: 35px;
+}
+.link-text {
+  color: red;
+}
