@@ -4,7 +4,7 @@
     <title>MyIIT - Course Registration</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
-    <link rel="stylesheet" media="screen" href="css/registration-reset.css" />
+    <link rel="stylesheet" media="screen" href="css/screen.css" />
     <link rel="stylesheet" media="screen" href="css/registration.css" />
     <!--Jquery-->
   <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -18,14 +18,15 @@
   <!--Load only registered courses if after add/drop-->
   </head>
   <body>
-    <div class="registration_wrapper">
-      <header>
-        <img src="http://mypages.iit.edu/~mblanski/img/IIT_Logo_360px.png" class="img360"/>
-        <img src="http://mypages.iit.edu/~mblanski/img/IIT_Logo_576px.png" class="img576"/>
-        <img src="http://mypages.iit.edu/~mblanski/img/IIT_Logo_768px.png" class="img768"/>
-      </header>
+    <header>
+      <img src="https://my.iit.edu/media/iit/images/header_blk_red.gif" alt="IIT-header">
+      <h3>Illinois Institute of Technology</h3>
+      <h1>myIIT</h1>
+    </header>
+    <main class="registration_wrapper">
+
       <section id="registered_courses">
-        <h2>Registered Courses:</h2>
+        <h3>Registered Courses:</h3>
         <!--Registered courses will load in here.-->
       </section>
       <section id="weekly_schedule">
@@ -34,12 +35,14 @@
       <section id="course_searchbars">
         <!--Determine how best to display search bars here-->
       </section>
-      <main id="available_courses">
-        <h2>Available Courses:</h2>
+      <section id="available_courses">
+        <h3>Available Courses:</h3>
         <p>Doubleclick or swipe right to register.</p>
         <!--Dynamic data will be loaded here-->
-      </main>
-      <footer>Mock IIT Portal - Design</footer>
-    </div>
+      </section>
+    </main>
+  <footer>
+    Project2: goodbye-poser
+  </footer>
   </body>
 </html>
