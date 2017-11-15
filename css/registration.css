@@ -54,7 +54,7 @@ footer {
   width: 100%;
 }
 
-h3 {
+section h3 {
   width: 100%;
   background-color: black;
   color: white;
@@ -92,6 +92,8 @@ h3 {
   display: block;
   text-align: center;
   border: none;
+  background-color: black;
+  color: white;
   /*background-color: #BDA089;*/
 }
 
