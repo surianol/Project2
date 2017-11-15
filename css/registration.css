@@ -140,26 +140,35 @@ main {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 10px;
-		grid-auto-rows: minmax(100px, auto);
 	}
 	
 	#available_courses {
 		grid-column: 1 / 1;
-		grid-row: 2 / 2;
+		grid-row: 3 / 3;
 	}
 	
 	#registered_courses {
 		grid-column: 2 / 2;
-		grid-row: 2 / 2;
+		grid-row: 3 / 3;
 	}
 	
 	#weekly_schedule {
 		grid-column: 2 / 2;
-		grid-row: 1 / 1;
+		grid-row: 2 / 2;
 	}
 	
 	#course_searchbars {
 		grid-column: 1 / 1;
+		grid-row: 2 / 2;
+	}
+	
+	header {
+		grid-column: 1 / 2;
 		grid-row: 1 / 1;
+	}
+
+	footer {
+		grid-column: 1 / 2;
+		grid-row: 4 / 4;
 	}
 }
