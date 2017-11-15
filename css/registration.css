@@ -135,4 +135,9 @@ main {
 	.coursedata_name {
 		font-size: 1.333em;
 	}
+	
+	#registered_courses {
+		min-width: 533px;
+		float: right;
+	}
 }
