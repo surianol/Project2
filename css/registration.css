@@ -22,7 +22,6 @@ input[type=button] {
 }
 
 main {
-	overflow-y: auto;
 }
 
 header {
@@ -40,7 +39,7 @@ footer {
 }
 
 .registered_course {
-	background-color: green;
+	background-color: #5E4B52;
 }
 
 .coursedata_name {
@@ -84,6 +83,7 @@ h2 {
 	display: block;
 	text-align: center;
 	border: none;
+	background-color: #BDA089;
 }
 
 /*phones, custom*/
