@@ -1,6 +1,6 @@
 function iitRegistration(){
   //Establish debug mode
-  var debugmode = true;
+  var debugmode = false;
   function debugLog( debugOutput ){
     if(debugmode === true){
       console.log(debugOutput);
