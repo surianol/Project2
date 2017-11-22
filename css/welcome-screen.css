@@ -301,6 +301,7 @@ section#content {
 	margin: auto;
 	width: 100%;
 	text-align: center;
+	padding-bottom: 15rem;
 }
 
 p#welcome-footer {

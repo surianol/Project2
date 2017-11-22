@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="nojs">
   <head>
     <title>MyIIT - Course Registration</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
     <link rel="stylesheet" media="screen" href="css/screen.css" />
     <link rel="stylesheet" media="screen" href="css/registration.css" />
+	<link rel="stylesheet" media="screen" href="css/welcome-screen.css" />
     <!--Jquery-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js" async></script> 
   <script type="text/javascript" src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js" async></script>
@@ -18,11 +19,21 @@
   <body>
     <header>
       <img src="https://my.iit.edu/media/iit/images/header_blk_red.gif" alt="IIT-header">
-      <h3>Illinois Institute of Technology</h3>
-      <h1>myIIT</h1>
     </header>
+	<nav id="links">
+		<ul>
+			<li><a href="welcome.html">Welcome</a></li>
+			<li><a href="#">*Academics*</a></li>
+			<li><a href="https://web.iit.edu/campus-life/get-involved/leadership/student-life-leader-information">Student Life</a></li>
+			<li><a href="https://web.iit.edu/financial-aid">Finances</a></li>
+			<li><a href="http://www.illinoistechathletics.com/landing/index">Athletics</a></li>
+			<li><a href="https://library.iit.edu/">Library</a></li>
+			<li><a href="https://research.iit.edu/">Research</a></li>
+			<li><a href="https://ots.iit.edu/help-and-support/get-helpsupport-desk">Training and Support</a></li>
+			<li><a href="index.html">Log out</a></li>
+		</ul>
+	</nav>
     <main class="registration_wrapper">
-
       <section id="registered_courses">
         <h3>Registered Courses:</h3>
         <!--Registered courses will load in here.-->
@@ -40,7 +51,7 @@
       </section>
     </main>
   <footer>
-    Project2: goodbye-poser
+    <p id="registration-footer">Created by: Goodbye-poser Team</p>
   </footer>
   </body>
 </html>
