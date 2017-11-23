@@ -1,8 +1,12 @@
 {
 function loadJquery() {
   var jquerySrc = document.createElement('script');
+  jquerySrc.setAttribute("async","");
+  jquerySrc.setAttribute("type","text/javascript");
   jquerySrc.onload = function() {
     var jquerySrcMob = document.createElement('script');
+    jquerySrcMob.setAttribute("async","");
+    jquerySrcMob.setAttribute("type","text/javascript");
     jquerySrcMob.src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js";
     document.getElementsByTagName('head')[0].appendChild(jquerySrcMob);
   };
