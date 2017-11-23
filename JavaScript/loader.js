@@ -7,6 +7,15 @@ function loadJquery() {
     var jquerySrcMob = document.createElement('script');
     jquerySrcMob.setAttribute("async","");
     jquerySrcMob.setAttribute("type","text/javascript");
+
+    jquerySrcMob.onload = function() {
+      var registractionSrc = document.createElement('script');
+      registractionSrc.setAttribute("async","");
+      registractionSrc.setAttribute("type","text/javascript");
+      registractionSrc.src = "JavaScript/registration.js";
+      document.getElementsByTagName('head')[0].appendChild(registractionSrc);
+  };
+
     jquerySrcMob.src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js";
     document.getElementsByTagName('head')[0].appendChild(jquerySrcMob);
   };
