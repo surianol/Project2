@@ -213,5 +213,9 @@ function iitRegistration(){
   parseTerms();
 };
 
-// Handle document ready
-$( document ).ready( iitRegistration );
+if (document.readyState === "complete") {
+  iitRegistration();
+} else {
+  // Handle document ready
+  $( document ).ready( iitRegistration );
+}
