@@ -88,7 +88,7 @@ section h3 {
 
 .coursedata_description_button {
   width: 100%;
-  clear: all;
+  clear: both;
   display: block;
   text-align: center;
   border: none;
