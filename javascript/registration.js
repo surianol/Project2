@@ -176,7 +176,9 @@ function iitRegistration(){
       $(this).removeClass("registration_event_unbound");
     });
     $("input.coursedata_description_button_unbound").each(function() {
-      $(this).on("click",{id: $(this).attr('id') }, toggleDescription);
+      $(this).on("click",{id: $(this).attr('id') }, function(e) {
+        toggleDescriptionOnEvent(e);
+      });
       $(this).removeClass("coursedata_description_button_unbound");
     });
     $("input.register_arrow").each(function() {
@@ -202,7 +204,7 @@ function iitRegistration(){
         $(this).addClass("registered_course");
         $(this).removeClass("registration_option");
         $(this).on("swipeleft",{id: $(this).attr('id') }, toggleRegistration);
-        $(this).off("swiperight", toggleRegistration);
+        $(this).off("swiperight");
         $(this).detach().appendTo(document.getElementById( "registered_courses" ));
         $(this).slideToggle();
       });
@@ -211,18 +213,22 @@ function iitRegistration(){
       $(this).slideToggle(function(){
         $(this).addClass("registration_option");
         $(this).removeClass("registered_course");
-        $(this).off("swipeleft", toggleRegistration);
+        $(this).off("swipeleft");
         $(this).on("swiperight",{id: $(this).attr('id') }, toggleRegistration);
         $(this).detach().appendTo(document.getElementById( "available_courses" ));
         $(this).slideToggle();
       });
     }
   }
+
+  function toggleDescriptionOnEvent(e) {
+    debugLog("firing description hide/show!");
+    e.stopPropagation();
+    toggleDescription.call(e.target);
+  }
   
   function toggleDescription() {
     debugLog("firing description hide/show!");
-    event.stopPropagation();
-	var target = event.target;
     var descriptionItem = $(this).parent().find('span.coursedata_description');
     if( $(descriptionItem).is(':hidden')) {
       $(this).attr("value","Less ...");
