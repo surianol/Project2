@@ -12,7 +12,7 @@ function loadJquery() {
       var registractionSrc = document.createElement('script');
       registractionSrc.setAttribute("async","");
       registractionSrc.setAttribute("type","text/javascript");
-      registractionSrc.src = "JavaScript/registration.js";
+      registractionSrc.src = "javascript/registration.js";
       document.getElementsByTagName('head')[0].appendChild(registractionSrc);
   };
 
