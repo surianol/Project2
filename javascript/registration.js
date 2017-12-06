@@ -176,9 +176,7 @@ function iitRegistration(){
       $(this).removeClass("registration_event_unbound");
     });
     $("input.coursedata_description_button_unbound").each(function() {
-      $(this).on("click",{id: $(this).attr('id') }, function(){
-		toggleDescription(event)
-      });
+      $(this).on("click",{id: $(this).attr('id') }, toggleDescription);
       $(this).removeClass("coursedata_description_button_unbound");
     });
     $("input.register_arrow").each(function() {
@@ -225,12 +223,12 @@ function iitRegistration(){
     debugLog("firing description hide/show!");
     event.stopPropagation();
 	var target = event.target;
-    var descriptionItem = $(target).parent().find('span.coursedata_description');
+    var descriptionItem = $(this).parent().find('span.coursedata_description');
     if( $(descriptionItem).is(':hidden')) {
-      $(target).attr("value","Less ...");
+      $(this).attr("value","Less ...");
       $(descriptionItem).show();
     } else {
-      $(target).attr("value","...");
+      $(this).attr("value","...");
       $(descriptionItem).hide();
     }
   }
