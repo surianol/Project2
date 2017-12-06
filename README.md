@@ -1,5 +1,1 @@
 # This repository contains our Project #2 files
-## Self-critique
-From an overall design perspective, this project finally caused the concept of modular scale to "click", as well as appropriate palette usage. I'm especially happy with picking up and running with jquery for the first time, taking it to dynamically loading json data, rendering that data as information on page, and then hooking up meaningful events to it. I believe I could have communicated a great deal better with my group members, thus avoiding a restyling rush in order to match their vision. The iterative design taken on the courses resulted in a much more refined approach than my original intent, causing "happy accidents" that ended up in my final design.
-## Group Member Critique
-Even though we had some initial communication difficulties, I believe we worked quite well as a team. Eun's image work gave us a much better look and feel to distinguish the page. Leydi's work on the common elements caused our styles to merge and made the entire project come together in a much more user friendly fashion than my slate-colored palette.
