@@ -1,20 +1,11 @@
-function iitRegistration(){
-  //Establish debug mode
-  var debugmode = false;
-  function debugLog( debugOutput ){
-    if(debugmode === true){
-      console.log(debugOutput);
-    }
-  }
-  debugLog("Debug Mode Active.");
-  
+function iitRegistration(){  
   /*hide mobile loading*/
   $( "div.ui-loader").hide();
   
 
   //Define Variabfunction iitRegistration(){
   //Establish debug mode
-  var debugmode = false;
+  var debugmode = true;
   function debugLog( debugOutput ){
     if(debugmode === true){
       console.log(debugOutput);
@@ -231,6 +222,7 @@ function iitRegistration(){
   function toggleDescription() {
     debugLog("firing description hide/show!");
     event.stopPropagation();
+	var target = event.target;
     var descriptionItem = $(this).parent().find('span.coursedata_description');
     if( $(descriptionItem).is(':hidden')) {
       $(this).attr("value","Less ...");
