@@ -1,13 +1,4 @@
-function iitRegistration(){
-  //Establish debug mode
-  var debugmode = false;
-  function debugLog( debugOutput ){
-    if(debugmode === true){
-      console.log(debugOutput);
-    }
-  }
-  debugLog("Debug Mode Active.");
-  
+function iitRegistration(){  
   /*hide mobile loading*/
   $( "div.ui-loader").hide();
   
@@ -181,15 +172,20 @@ function iitRegistration(){
   
   function bindCourseEvents() {
     $("div.registration_event_unbound").each(function() {
-      $(this).on("swiperight",{id: $(this).attr('id') }, toggleRegistration);
+      $(this).on("swiperight",{id: $(this).attr('id') }, function(e) {
+        toggleRegistrationOnEvent(e);
+      });
       $(this).removeClass("registration_event_unbound");
     });
     $("input.coursedata_description_button_unbound").each(function() {
-      $(this).on("click",{id: $(this).attr('id') }, toggleDescription);
+      $(this).on("click",{id: $(this).attr('id') }, function(e) {
+        toggleDescriptionOnEvent(e);
+      });
       $(this).removeClass("coursedata_description_button_unbound");
     });
     $("input.register_arrow").each(function() {
-      $(this).on("click",{id: $(this).parent().attr('id') }, function(){
+      $(this).on("click",{id: $(this).parent().attr('id') }, function(e){
+        e.stopPropagation();
 	    toggleRegistration.call($(this).parent());
       });
     });
@@ -202,16 +198,22 @@ function iitRegistration(){
 	});
   }
   
-  function toggleRegistration() {
+  function toggleRegistrationOnEvent(e) {
     debugLog("firing registration event!");
-    event.stopPropagation();
+    e.stopPropagation();
+	toggleRegistration.call(e.target);
+  }
+  function toggleRegistration() {
+    debugLog("firing registration code!");
     if( $(this).hasClass("registration_option") ) {
       debugLog("Moved " + $(this).attr("id") + " to registered courses!");
       $(this).slideToggle(function(){
         $(this).addClass("registered_course");
         $(this).removeClass("registration_option");
-        $(this).on("swipeleft",{id: $(this).attr('id') }, toggleRegistration);
-        $(this).off("swiperight", toggleRegistration);
+        $(this).on("swipeleft",{id: $(this).attr('id') }, function(e){
+          toggleRegistrationOnEvent(e);
+        });
+        $(this).off("swiperight");
         $(this).detach().appendTo(document.getElementById( "registered_courses" ));
         $(this).slideToggle();
       });
@@ -220,17 +222,24 @@ function iitRegistration(){
       $(this).slideToggle(function(){
         $(this).addClass("registration_option");
         $(this).removeClass("registered_course");
-        $(this).off("swipeleft", toggleRegistration);
-        $(this).on("swiperight",{id: $(this).attr('id') }, toggleRegistration);
+        $(this).off("swipeleft");
+        $(this).on("swiperight",{id: $(this).attr('id') }, function(e){
+          toggleRegistrationOnEvent(e);
+        });
         $(this).detach().appendTo(document.getElementById( "available_courses" ));
         $(this).slideToggle();
       });
     }
   }
+
+  function toggleDescriptionOnEvent(e) {
+    debugLog("firing description hide/showevent !");
+    e.stopPropagation();
+    toggleDescription.call(e.target);
+  }
   
   function toggleDescription() {
-    debugLog("firing description hide/show!");
-    event.stopPropagation();
+    debugLog("firing description hide/show code!");
     var descriptionItem = $(this).parent().find('span.coursedata_description');
     if( $(descriptionItem).is(':hidden')) {
       $(this).attr("value","Less ...");
