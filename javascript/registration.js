@@ -160,7 +160,7 @@ function iitRegistration(){
         var regarrow = document.createElement('img');
         $( regarrow ).addClass("register_arrow");
         $( regarrow ).attr("src","images/add.png");
-        currentCell.appendChild(regarrow);
+        newRow.appendChild(regarrow);
       }
 
       if(coursefield === "description") {
