@@ -319,6 +319,11 @@ footer {
   color: red;
 }
 
-img {
+#header-img {
 	width: 100%;
+}
+
+.register_arrow {
+	clear: right;
+	float: right;
 }
