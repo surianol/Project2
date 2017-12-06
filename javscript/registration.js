@@ -168,6 +168,12 @@ function iitRegistration(){
       $(this).removeClass("coursedata_description_button_unbound");
     });
   }
+
+  function disableLinkAjax() {
+    $("a").each(function() {
+      $(this).data("ajax","false");
+	});
+  }
   
   function toggleRegistration() {
     debugLog("firing registration event!");
@@ -211,6 +217,7 @@ function iitRegistration(){
   debugLog( "Ready!" );
   debugLog( "Performing Ajax!" );
   parseTerms();
+  disableLinkAjax();
 };
 
 if (document.readyState === "complete") {
