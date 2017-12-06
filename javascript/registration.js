@@ -157,7 +157,8 @@ function iitRegistration(){
       newRow.appendChild(currentCell);
 	  
       if(coursefield == "subjectname") {
-        var regarrow = document.createElement('img');
+        var regarrow = document.createElement('input');
+        $( regarrow ).attr("type","image");
         $( regarrow ).addClass("register_arrow");
         $( regarrow ).attr("src","images/add.png");
         newRow.appendChild(regarrow);
