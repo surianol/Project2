@@ -172,6 +172,7 @@ function iitRegistration(){
   function disableLinkAjax() {
     $("a").each(function() {
       $(this).data("ajax","false");
+      $(this).attr("rel","external");
 	});
   }
   
