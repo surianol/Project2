@@ -13,6 +13,7 @@ function loadJquery() {
       registractionSrc.setAttribute("async","");
       registractionSrc.setAttribute("type","text/javascript");
       registractionSrc.src = "javascript/registration.js";
+
       document.getElementsByTagName('head')[0].appendChild(registractionSrc);
   };
 
@@ -31,3 +32,4 @@ document.onreadystatechange = () => {
   }
 };
 }
+
