@@ -12,6 +12,20 @@ function iitRegistration(){
   $( "div.ui-loader").hide();
   
 
+  //Define Variabfunction iitRegistration(){
+  //Establish debug mode
+  var debugmode = false;
+  function debugLog( debugOutput ){
+    if(debugmode === true){
+      console.log(debugOutput);
+    }
+  }
+  debugLog("Debug Mode Active.");
+  
+  /*hide mobile loading*/
+  $( "div.ui-loader").hide();
+  
+
   //Define Variables
   debugLog("Defining Variables");
   
@@ -141,6 +155,14 @@ function iitRegistration(){
       
       currentCell.appendChild(cellText);
       newRow.appendChild(currentCell);
+	  
+      if(coursefield == "subjectname") {
+        var regarrow = document.createElement('input');
+        $( regarrow ).attr("type","image");
+        $( regarrow ).addClass("register_arrow");
+        $( regarrow ).attr("src","images/add.png");
+        newRow.appendChild(regarrow);
+      }
 
       if(coursefield === "description") {
         var descriptionButton = document.createElement('input');
@@ -159,13 +181,17 @@ function iitRegistration(){
   
   function bindCourseEvents() {
     $("div.registration_event_unbound").each(function() {
-      $(this).on("dblclick",{id: $(this).attr('id') }, toggleRegistration);
       $(this).on("swiperight",{id: $(this).attr('id') }, toggleRegistration);
       $(this).removeClass("registration_event_unbound");
     });
     $("input.coursedata_description_button_unbound").each(function() {
       $(this).on("click",{id: $(this).attr('id') }, toggleDescription);
       $(this).removeClass("coursedata_description_button_unbound");
+    });
+    $("input.register_arrow").each(function() {
+      $(this).on("click",{id: $(this).parent().attr('id') }, function(){
+	    toggleRegistration.call($(this).parent());
+      });
     });
   }
 
