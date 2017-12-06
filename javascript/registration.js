@@ -12,6 +12,20 @@ function iitRegistration(){
   $( "div.ui-loader").hide();
   
 
+  //Define Variabfunction iitRegistration(){
+  //Establish debug mode
+  var debugmode = false;
+  function debugLog( debugOutput ){
+    if(debugmode === true){
+      console.log(debugOutput);
+    }
+  }
+  debugLog("Debug Mode Active.");
+  
+  /*hide mobile loading*/
+  $( "div.ui-loader").hide();
+  
+
   //Define Variables
   debugLog("Defining Variables");
   
@@ -141,6 +155,13 @@ function iitRegistration(){
       
       currentCell.appendChild(cellText);
       newRow.appendChild(currentCell);
+	  
+      if(coursefield == "starttime") {
+        var regarrow = document.createElement('img');
+        $( regarrow ).addClass("register_arrow");
+        $( regarrow ).attr("src","images/add.png");
+        currentCell.appendChild(regarrow);
+      }
 
       if(coursefield === "description") {
         var descriptionButton = document.createElement('input');
