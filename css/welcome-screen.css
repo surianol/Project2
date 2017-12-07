@@ -278,7 +278,8 @@ nav#links ul {
 }
 
 nav#links ul li {
-	width: 100%;
+	width: auto;
+	float: left;
 }
 
 nav#links ul li a {
