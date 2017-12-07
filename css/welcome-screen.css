@@ -278,6 +278,7 @@ nav#links ul {
 }
 
 nav#links ul li {
+	width: auto;
 	float: left;
 }
 
@@ -297,15 +298,29 @@ nav#links ul li a:hover {
 	text-decoration: underline;
 }
 
+@media only screen and (max-width: 400px) {
+	html {
+		width: auto;
+		float: auto;
+		line-height: 2;
+	}
+}
+
+@media only screen and (min-width: 40em) {
+	html {
+		line-height: 1;
+	}
+}
+
 section#content {
 	margin: auto;
 	width: 100%;
 	text-align: center;
-	padding-bottom: 15rem;
+	padding-bottom: 1.5rem;
 }
 
 p#welcome-footer {
-	margin-top: 3.5rem;
+	margin-top: 1.5rem;
 }
 
 footer {
