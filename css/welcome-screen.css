@@ -299,7 +299,7 @@ nav#links ul li a:hover {
 }
 
 @media only screen and (max-width: 400px) {
-	nav#links {
+	html {
 		width: auto;
 		float: left;
 		line-height: 2;
@@ -307,7 +307,7 @@ nav#links ul li a:hover {
 }
 
 @media only screen and (min-width: 40em) {
-	nav#links {
+	html {
 		font-size: 1.30em;
 		line-height: 1;
 	}
