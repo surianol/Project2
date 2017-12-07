@@ -298,15 +298,15 @@ nav#links ul li a:hover {
 }
 
 @media only screen and (max-width: 400px) {
-	html {
+	nav#links {
 		width: auto;
-		float: none;
+		float: left;
 		line-height: 2;
 	}
 }
 
 @media only screen and (min-width: 40em) {
-	html {
+	nav#links {
 		font-size: 1.30em;
 		line-height: 1;
 	}
