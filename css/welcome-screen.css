@@ -301,14 +301,13 @@ nav#links ul li a:hover {
 @media only screen and (max-width: 400px) {
 	html {
 		width: auto;
-		float: left;
+		float: auto;
 		line-height: 2;
 	}
 }
 
 @media only screen and (min-width: 40em) {
 	html {
-		font-size: 1.30em;
 		line-height: 1;
 	}
 }
