@@ -203,6 +203,7 @@ function iitRegistration(){
     e.stopPropagation();
 	toggleRegistration.call(e.target);
   }
+
   function toggleRegistration() {
     debugLog("firing registration code!");
     if( $(this).hasClass("registration_option") ) {
@@ -215,6 +216,7 @@ function iitRegistration(){
         });
         $(this).off("swiperight");
         $(this).detach().appendTo(document.getElementById( "registered_courses" ));
+        $(this).find("input.register_arrow").attr("src","images/drop.png");
         $(this).slideToggle();
       });
     } else {
@@ -227,6 +229,7 @@ function iitRegistration(){
           toggleRegistrationOnEvent(e);
         });
         $(this).detach().appendTo(document.getElementById( "available_courses" ));
+        $(this).find("input.register_arrow").attr("src","images/add.png");
         $(this).slideToggle();
       });
     }
