@@ -182,6 +182,7 @@ section h3 {
 @media (max-width: 575px) {
   html {
     font-size: 0.70em;
+	line-height: 1.333em;
 	width: auto;
   }
   .img360 {
@@ -215,7 +216,7 @@ section h3 {
 @media (min-width: 576px) and (max-width: 767px) {
   html {
     font-size: 0.80em;
-	line-height: 1;
+	line-height: 1.333em;
 	width: auto;
   }
   
@@ -250,7 +251,7 @@ section h3 {
 @media (min-width: 768px) {
   html {
     font-size: 1em;
-	line-height: 2;
+	line-height: 1.333em;
 	width: auto;
   }
   
